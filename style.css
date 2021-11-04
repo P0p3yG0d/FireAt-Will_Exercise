@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Main Screen */
+
+section.mainScreen {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./resources/HomePage/KV_Grapple_v08@3x.jpg");
+    background-size: cover;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 123px;
+    padding: 20px 20px;
+}
+
+nav i{
+    color: #fff;
+    position:absolute;
+    top: 0;
+    right: 0;
+    margin: 20px 20px;
+    font-size: 40px;
+    z-index: 10;
+}
+
+.navlinks {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);  
+    height: 100vh;
+    width: 289px;  
+    top: 0;
+    right: -289px;
+    z-index: 9;
+    transition: right 500ms;
+}
+
+.navlinks ul li {
+    list-style: none;
+    text-align: center;
+    line-height: 74px;
+    cursor: pointer;
+}
+
+
+div ul li:first-child {
+    margin-top: 154px;
+}
+
+.navlinks ul li:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.navlinks ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    font-style: oblique;
+    letter-spacing: 2.4px;
+    line-height: 1;
+    font-stretch: normal;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .navlinks{
+    right: 0;
+}
+
+section .slogan {
+    margin-top: 37%;
+    
+}
+
+img.one{
+    width: 54%;
+}
+
+img.two{
+    width: 33%;
+    margin-top:5px;
+}
+
+@media (max-width: 700px) {
+    section.mainScreen {
+        width: 100vw;
+        height: 100%;
+        background-image: url(/resources/HomePage/moblileview/グループ\ 983@3x.png);
+    }
+    nav img {
+        width: 87px;
+        padding: 20px 20px;
+    }
+    .navlinks {
+        width: 100%;
+        right: -100%;
+    }
+    section .slogan {
+        margin: 50% 7% 0 7%;
+    }
+    img.one{
+        width: 100%;
+    }
+    img.two{
+        width: 60%;
+
+    }
+}
+
+ /* ShopScreen */
+section.shopnow {
+    width: 100%;
+}
+
+.shopnow> img {
+    width: 38%;
+    display: block;
+    margin: 67px auto 90px auto;
+}
+
+@media (max-width: 700px) {
+    .shopnow> img {
+        width: 90%;
+        display: block;
+        margin: 25px auto 50px auto;
+    }
+}
+
+/* Video */
+section.view {
+    width: 100%;
+    background: rgb(0, 0, 0);
+    position: relative;
+    border: 1px solid transparent;
+}
+
+section.view::before {
+    content: '';
+    width: 65%; 
+    height: 0px;
+    border-bottom: 30px solid rgb(0, 0, 0);
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    display: block;
+    margin: -30px auto 0 auto;
+}
+
+
+.video>img.video-content {
+    width: 50%;
+    display: block;
+    margin: 78px auto 80px auto;
+}
+
+.play {
+    width: 8%;
+    position: absolute;
+    right: 50%;
+    top: 15%;
+    transform: translate(50%, 50%);
+}
+
+.speciality{
+    width: 80%;
+    margin: 0 auto 157px auto;
+}
+.speciality>img {
+    width: 40%;
+    display: block;
+    margin: 0 auto 40px auto;
+}
+
+.row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.col {
+    flex-basis: 30%;
+}
+
+.col>img {
+    width: 100%;
+}
+
+.col>h1 {
+    color:rgb(255, 255, 255);
+    font-size: 25px;
+    line-height: 1.4;
+    margin: 28px 0 15px 0;
+}
+
+.col>p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: lighter;
+}
+
+@media (max-width: 700px) {
+    .video>img.video-content {
+        width: 85%;
+        display: block;
+        margin: 40px auto 60px auto;
+    }
+    .play {
+        width: 15%;
+        top: 4%;
+    }
+    .speciality{
+        width: 100%;
+    }
+    .speciality>img {
+        width: 90%;
+        display: block;
+        margin: 0 auto 40px auto;
+    }
+    .row {
+        width: 75%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .col {
+        margin-bottom: 60px;
+    }
+}
+
+/* View of World */
+
+section.world {
+    width: 100%;
+    background-image: url(./resources/view_of_world/グループ\ 27@3x.png);
+    background-size: cover;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+section.world::before{
+    content: '';
+    width: 65%; 
+    height: 0px;
+    border-bottom: 30px solid rgb(255, 255, 255);
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    display: block;
+    margin: -30px auto 0 auto;
+}
+
+div.world-content {
+    width: 60%;
+    background: rgba(255, 255, 255, 0.62);
+    display: block;
+    margin: auto;
+    padding: 80px 0 50px 0;
+}
+
+div.world-content>img {
+    width: 55%;
+    display: block;
+    margin: 0 auto 55px auto;
+}
+
+div.world-content>p {
+    text-align: center;
+    margin: 0 50px 0 50px;
+    line-height: 1.75;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+}
+@media (max-width: 700px) {
+    section.world {
+        width: 100%;
+        background-image: url(./resources/view_of_world/マスクグループ\ 2@3x.png);
+        background-size: cover;
+    }
+    div.world-content {
+        width: 95%;
+    }
+    div.world-content>img {
+        width: 75%;
+        margin: 0 auto 48px auto;
+    }
+    div.world-content{
+        padding: 68px 0 50px 0;
+    }
+    div.world-content>p {
+        margin: 0 10px 0 10px;
+        line-height: 1.8;
+        font-size: 14px;
+    }
+}
+
+/* View of World */
+section.slideshow {
+    width: 100%;
+    height: 658px;
+    background-image: url(./resources/slide/グループ\ 963@3x.png);
+    background-size: cover;
+}
+
+/* Slide Show */
+
+/* Twitter */
+section.twitter>img {
+    width: 20%;
+    display: block;
+    margin: 80px auto 41px auto;
+}
+
+.twitter-tweet{
+    display: block;
+    margin: auto;
+}
+
+section.twitter>button {
+    display: block;
+    margin: 40px auto 80px auto;
+    width: 330px;
+    height: 44px;
+    border-radius: 5px;
+    background-color: #3595e0;
+    border: none;
+    box-shadow: 0 3px 6px 0 rgba(204, 204, 204, 0.7);
+    cursor: pointer;
+}
+
+button>a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.69;
+}
+
+@media (max-width: 700px) {
+    section.twitter>img {
+        width: 55%;
+        margin: 60px auto 24px auto
+    }
+    #twitter-container{
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+    section.twitter>button {
+        margin: 0 auto 60px auto;
+    }
+}
+
+/* Staff */
+section.staff {
+    background-image: url(./resources/staff/white_bg@3x.png);
+    background-repeat: repeat;
+    background-size: 600px;
+    padding-top: 100px;
+}
+
+section.staff>img {
+    width: 33%;
+    display: block;
+    margin: 0 auto 80px auto;
+}
+
+.staff-content {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.staff-info>h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: 0.56px;
+    text-align: center;
+    color: #333;
+}
+
+.staff-info>h1 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: bolder;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 3.5px;
+    text-align: center;
+    color: #111;
+}
+
+.staff-info>p {
+    margin-bottom: 50px;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    text-align: left;
+    color: #272727;
+}
+
+@media (max-width: 700px) {
+    section.staff {
+        padding-top: 60px;
+    }
+    section.staff>img {
+        width: 78%;
+        display: block;
+        margin: 0 auto 60px auto;
+    }
+    .staff-content {
+        width: 90%;
+    }
+    .staff-info>h4 {
+        margin-bottom: 0;
+        font-size: 14px;
+    
+    }
+    .staff-info>h1 {
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    .staff-info>p {
+        margin-bottom: 30px;
+        font-size: 14px;
+    }
+}
+
+/* Informations */
+.informations-container>img {
+    width: 35%;
+    display: block;
+    margin: 80px auto 50px auto;
+}
+
+.informations {
+    width: 45%;
+    display: block;
+    margin: auto;
+    border: solid 2px #e2e2e2;
+    padding: 40px 68px 40px 68px;
+}
+
+table {
+    width: 100%;
+}
+
+.left {
+    text-align: right;
+    vertical-align: top;
+    width: 13%;
+}
+
+.right {
+    width: 14%;
+}
+
+tr {
+    font-size: 16px;
+    letter-spacing: normal;
+}
+
+td {
+    padding: 7px 0;
+}
+
+.informations-container>img.share{
+    width: 10%;
+    display: block;
+    margin: 50px auto 16px auto;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+}
+.social-media>img {
+    width: 4%;
+    margin: 0 15px; 
+}
+
+@media (max-width: 700px) {
+    .informations-container{
+        width:100%;
+    }
+    .informations-container>img {
+        width: 88%;
+        margin: 60px auto 40px auto;
+    }
+    .informations {
+        width: 90%;
+        padding: 0;
+    }
+    table {
+        width: 100%;
+    }
+    .left {
+        width: 23%;
+    }
+    .right {
+        width: 64%;
+    }
+    tr {
+        font-size: 13px;
+    }
+    td {
+        padding: 3px 0;
+    }
+    .informations-container>img.share{
+        width: 27%;
+        margin: 40px auto 20px auto;
+    }
+    .social-media{
+        margin-bottom: 51px;
+    }
+    .social-media>img {
+        width: 13%;
+        margin: 0 12.5px;
+    }
+}
+    
+/* Footer */
+section.footer{
+    background: #000000;
+}
+
+.footer-content {
+    width: 60%;
+    display: block;
+    margin: auto;
+    padding: 70px 0 40px 0;
+}
+p.trademark {
+    color: #626262;
+    font-size: 13px;
+    text-align: center;
+}
+
+p.knowledge {
+    font-size: 15px;
+    color: #a5a5a5;
+    line-height: 2.33;
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media (max-width: 700px) {
+    .footer-content {
+        width: 90%;
+        padding: 92px 0 35px 0;
+    }
+    p.trademark {
+        font-size: 14px;
+        line-height: 1.58;
+    }
+    p.knowledge {
+        font-size: 15px;
+        line-height: 2.69;
+    }    
+}
